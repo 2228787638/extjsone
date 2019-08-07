@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="resources/css/ext-all.css" rel="stylesheet">
+    <script src="adapter/ext/ext-base.js"></script>
+    <script src="ext-all.js"></script>
+    <script src="component/myButton.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var table = new Ext.Panel({
+                renderTo: document.body,
+                border: false,
+                layout:{
+                    type:'table',
+                    columns: 3
+                },
+                items: [
+                    {
+                        xtype: 'box',
+                        height: 80,
+                        autoEl: {
+                            tag: 'img',
+                            src: 'reset/img/logo.png'
+                        },
+                    },
+                    {
+                        xtype: 'tabpanel',
+                        plain: true,
+                        border: false,
+                        activeTab: 0,
+                        width: 400,
+                        items: [
+                            {
+                                title: '国内版',
+                                items: [
+                                    {
+                                        xtype: 'field',
+                                        height: 40,
+                                        width: 400
+                                    },
+                                ]
+                            },
+                            {
+                                title: '国际版',
+                                items: [
+                                    {
+                                        xtype: 'field',
+                                        height: 40,
+                                        width: 400
+                                    },
+                                ],
+                            }
+                        ],
+                    },
+                    {xtype: 'hi.SeachButton'},
+                ]
+            });
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
