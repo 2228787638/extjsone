@@ -1,12 +1,10 @@
 Ext.ns("hi");
-hi.SeachButton = Ext.extend(Ext.BoxComponent,
+hi.SeachButton = Ext.extend(Ext.Button,
     {
-        xtype: 'box',
-        height: 80,
-        autoEl: {
-            tag: 'img',
-            src: 'reset/img/seach.png'
-        },
+        style: 'position:absolute; ',
+        height: 45,
+        y: 30,
+        text:'seach'
     }
 );
 Ext.reg('hi.SeachButton', hi.SeachButton);
